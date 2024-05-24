@@ -1,0 +1,21 @@
+Histogram Equilization
+
+#Defination:
+	Histogram equalization is a technique for adjusting image intensities to enhance contrast. 
+While it is straightforward for grayscale images, applying it to color images requires additional 
+considerations to avoid color distortion
+
+#Steps for Histogram Equalization on a Color Image:
+1. Convert the Color Space:
+	* Convert the image from RGB to a color space that separates intensity from color information, 
+	  such as the HSV (Hue, Saturation, Value) or YCbCr (Luminance, Chrominance) color space.
+	* For HSV, you would equalize the V (value) channel.
+	* For YCbCr, you would equalize the Y (luminance) channel.
+
+2. Equalize the Intensity Channel:
+	* Apply histogram equalization to the intensity component (V in HSV, Y in YCbCr).
+
+3. Convert Back to RGB:
+	* Combine the equalized intensity channel with the original color channels 
+	  (H and S in HSV, Cb and Cr in YCbCr).
+	* Convert the image back to the RGB color space.	
